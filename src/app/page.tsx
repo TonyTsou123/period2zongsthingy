@@ -14,18 +14,34 @@ const mockImages = mockUrls.map((url, index) => ({
 }))
 
 export default function HomePage() {
-  return(
+  return (
     <main className="">
       <div className="flex flex-wrap gap-4">
-        {mockImages.map((image) =>(
+        {mockImages.map((image) => (
           <div key={image.id} className="w-48">
             <img src={image.url} />
+          </div>
+        ))}
       </div>
-      ))}
+      <div className="card bg-base-100 w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://utfs.io/f/2af56916-a47f-4e05-9b14-a67d93d569ef-2us.jpg"
+            alt="Shoes"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Click here to get this car for free</h2>
+          <p>Totally not a scam just click it and its yours!</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
       </div>
+
+
     </main>
   );
-
 }
 
 
